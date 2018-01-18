@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int lcm(int n,int m){
+	
+	static int mul=0;
+	mul=mul+m;
+	if((mul%n== 0) && (mul%m== 0)){
+		   return mul;
+		}
+	else{
+		
+		  return lcm(n,m);
+	     }
+	
+	}
+
+ int main(){
+ 	
+ 	int n,m,lm;
+ 	cin>>n>>m;
+ 	if(n>m){
+ 		lm=lcm(m,n);
+ 		}
+ 		else{
+ 			lm=lcm(n,m);
+ 			}
+ 	cout<<n<<" "<<m<<" : "<<lm<<endl;
+ 	
+       return 0;
+}
